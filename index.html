@@ -26,8 +26,7 @@
         <section class="sections" id="home">
             <h2>Welcome to My Portfolio</h2>
             <p>This is the home page of my portfolio website. Here you can find information about me and my work.</p>
-            <img src="https://i.pinimg.com/736x/d3/97/09/d39709931cd475f7b75b8e171a1d47ec.jpg" alt="portfolio image" width="400" height="400" class="bg-color"><br>
-
+            <img src="https://i.pinimg.com/736x/d3/97/09/d39709931cd475f7b75b8e171a1d47ec.jpg" alt="portfolio image" width="400" height="400" class="bg-color"><br><br>
             <h3>OR WATCH THE VIDEOOOO </h3><br>
 
             <!--<video width="400" controls>
@@ -43,14 +42,14 @@
         <section class="sections" id="about">
             <h2>About me</h2>
             <p>Hi! i am sania tarannum, a 3rd year web developer learning how to build websites!</p>
-            <p>I am currently learning html and css.</p>
+            <p>I am currently learning HTML and Cascading Style Sheets(CSS).</p>
             <p>In the future, I hope to learn javascript and MERN stack</p>
         </section>
 
         <section class="sections" id="contact">
             <h2>Contact Me</h2>
-            <fieldset>
-                <legend> Fill this form to Contact Me</legend>
+            
+                <h3> Fill this form to Contact Me</h3>
                 <form action="">
                     <div>Name: <input type="text" placeholder="Your Name" class="username" id="name" required> </div>
                     <div>Email: <input type="email" placeholder="Your Email" class="email" id="email" required> </div>
@@ -70,19 +69,24 @@
                     </div>
 
                     <div>
-                        <span>Gender:</span>
-                        <input type="radio" class="gender" id="male" name="gender" value="male">
-                        <label for="male">Male</label>
-                        <input type="radio" class="gender" id="female" name="gender" value="female">
-                        <label for="female">Female</label>
-                        <input type="radio" class="gender" id="others" name="gender" value="others">
-                        <label for="others">Others</label>
+                        <fieldset>
+                            
+                            <legend>Select Gender:</legend>
+                            <input type="radio" class="gender" id="male" name="gender" value="male">
+                            
+                            <label for="male">Male</label>
+                            <input type="radio" class="gender" id="female" name="gender" value="female">
+                            
+                            <label for="female">Female</label>
+                            <input type="radio" class="gender" id="others" name="gender" value="others">
+                            
+                            <label for="others">Others</label>
+                        </fieldset>
                     </div>
                     <div >
                         <input id="submit" type="submit" value="SUBMIT">
                     </div>
                 </form>
-            </fieldset>
         </section>
         
     </main>
