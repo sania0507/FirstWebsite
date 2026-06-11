@@ -1,0 +1,323 @@
+Great question. The easiest way to understand CSS units is to connect them to websites you already use.
+
+# `100vw` + `100vh`
+
+### Example: Netflix login page
+
+When you open the Netflix landing page, the giant background image covers the entire screen.
+
+```css
+.hero {
+    width: 100vw;
+    height: 100vh;
+}
+```
+
+The hero section wants to be exactly as large as the viewport.
+
+Other examples:
+
+* Landing pages
+* Full-screen game menus
+* Splash screens
+* Loading overlays
+
+---
+
+# `%`
+
+### Example: YouTube content area
+
+The video grid doesn't say:
+
+```css
+width: 1200px;
+```
+
+Instead it's something like:
+
+```css
+width: 100%;
+```
+
+because it should adapt to:
+
+* laptop
+* tablet
+* ultrawide monitor
+
+The content takes a percentage of its parent container.
+
+---
+
+# `rem`
+
+### Example: Reddit, GitHub, Medium
+
+Text sizes are commonly:
+
+```css
+body {
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+```
+
+Why?
+
+Accessibility.
+
+If a user increases browser font size, the site scales nicely.
+
+---
+
+# `px`
+
+### Example: Borders everywhere
+
+GitHub buttons:
+
+```css
+border: 1px solid;
+```
+
+Navbar shadow:
+
+```css
+box-shadow: 0 1px 3px;
+```
+
+Icons:
+
+```css
+width: 24px;
+height: 24px;
+```
+
+Pixels are great for precise small details.
+
+---
+
+# Real Navbar Example
+
+Take the GitHub navbar.
+
+You'd likely see something conceptually similar to:
+
+```css
+nav {
+    width: 100%;
+    height: 4rem;
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+}
+```
+
+Why?
+
+### Width
+
+```css
+width: 100%;
+```
+
+The navbar should match the page width.
+
+Not:
+
+```css
+width: 100vw;
+```
+
+because that can create scrollbar issues.
+
+---
+
+### Height
+
+```css
+height: 4rem;
+```
+
+If root font size is 16px:
+
+```text
+4 × 16 = 64px
+```
+
+A nice navbar height.
+
+---
+
+### Padding
+
+```css
+padding: 0 2rem;
+```
+
+Gives spacing from edges.
+
+---
+
+# Real Card Example
+
+Think Amazon product card.
+
+```css
+.card {
+    width: 300px;
+    padding: 1rem;
+}
+```
+
+Why fixed width?
+
+Because product cards should stay visually consistent.
+
+Pixels work well here.
+
+---
+
+# Real Dashboard Example
+
+Think:
+
+* Notion
+* Jira
+* Trello
+
+Main layout:
+
+```css
+.sidebar {
+    width: 20%;
+}
+
+.content {
+    width: 80%;
+}
+```
+
+or
+
+```css
+.sidebar {
+    width: 250px;
+}
+```
+
+depending on design goals.
+
+---
+
+# Real Mobile Menu Overlay
+
+Think YouTube mobile menu.
+
+When it opens:
+
+```css
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+```
+
+It covers the entire screen.
+
+Perfect use case for viewport units.
+
+---
+
+# What Professionals Usually Use
+
+### Typography
+
+```css
+font-size: 1rem;
+font-size: 1.5rem;
+font-size: 2rem;
+```
+
+---
+
+### Spacing
+
+```css
+padding: 1rem;
+margin: 2rem;
+gap: 1rem;
+```
+
+---
+
+### Layout Width
+
+```css
+width: 100%;
+```
+
+---
+
+### Full Screen Sections
+
+```css
+width: 100vw;
+height: 100vh;
+```
+
+---
+
+### Precise Elements
+
+```css
+border: 1px;
+icon: 24px;
+```
+
+---
+
+# Mental Model
+
+When designing, ask:
+
+### Is it text or spacing?
+
+→ Use `rem`
+
+```css
+font-size: 1rem;
+padding: 2rem;
+```
+
+### Is it relative to parent?
+
+→ Use `%`
+
+```css
+width: 100%;
+```
+
+### Is it relative to screen?
+
+→ Use `vw` / `vh`
+
+```css
+height: 100vh;
+```
+
+### Does it need pixel-perfect precision?
+
+→ Use `px`
+
+```css
+border: 1px;
+```
+
+That's very close to how modern sites like GitHub, Reddit, Stripe, Airbnb, and Notion are styled.
