@@ -1,0 +1,31 @@
+p{
+    text-align:right;
+    text-transform:capitalize;
+}
+*{
+    background-color: rgb(10, 22, 66);
+    color: cyan;
+    text-transform: uppercase;
+}
+
+.some{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    font-family: 'monospace', monospace;
+    font-style:italic;
+    font-weight:600;
+
+}
+
+li::before{
+    content: '';    
+    background-size:contain;
+    background-repeat: no-repeat;
+    list-style: url('https://cdn-icons-png.flaticon.com/512/32/32177.png');
+}
+
+li{
+    list-style:square;
+    width:1000px;
+    height:100px;
+}

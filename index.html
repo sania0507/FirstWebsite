@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        
+        <nav> 
+                
+            <h1 class="logo">&lt;Sania.dev&gt;</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+                
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="sections" id="home">
+            <h2>Welcome to My Portfolio</h2>
+            <p>This is the home page of my portfolio website. Here you can find information about me and my work.</p>
+            <img src="https://i.pinimg.com/736x/d3/97/09/d39709931cd475f7b75b8e171a1d47ec.jpg" alt="portfolio image" width="400" height="400" class="bg-color"><br>
+
+            <h3>OR WATCH THE VIDEOOOO </h3><br>
+
+            <!--<video width="400" controls>
+                <source src="wtvwtv.mp4" type="video/mp4" controls autoplay muted width="400px" height="200px">
+                Your browser does not support the video tag.
+            </video>
+            -->
+            <!-- paste src in ur browser to check if yt allows u to embed a video in ur personal site-->
+            <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/5fzve4kVz9Q" title="Charlie Puth - Attention (Hindi Version) Cover | ध्यान | Indian Cover" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            <a class="BTN" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> click this to get rickrolled </a>
+        </section>
+
+        <section class="sections" id="about">
+            <h2>About me</h2>
+            <p>Hi! i am sania tarannum, a 3rd year web developer learning how to build websites!</p>
+            <p>I am currently learning html and css.</p>
+            <p>In the future, I hope to learn javascript and MERN stack</p>
+        </section>
+
+        <section class="sections" id="contact">
+            <h2>Contact Me</h2>
+            <fieldset>
+                <legend> Fill this form to Contact Me</legend>
+                <form action="">
+                    <div>Name: <input type="text" placeholder="Your Name" class="username" id="name" required> </div>
+                    <div>Email: <input type="email" placeholder="Your Email" class="email" id="email" required> </div>
+                    <div>Message: <textarea placeholder="Your Message" rows="10" cols="300" class="message" id="message" required></textarea> </div>
+
+                    <div>
+                        <label for="state">State: </label>
+                        <select name="state" id="state">
+                            <option value="delhi">Delhi</option>
+                            <option value="hyderabad">Hyderabad</option>
+                            <option value="banglore">Banglore</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="birthday1">Birthday:</label>
+                        <input type="date" id="birthday1" name="birthday"><br><br>
+                    </div>
+
+                    <div>
+                        <span>Gender:</span>
+                        <input type="radio" class="gender" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" class="gender" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" class="gender" id="others" name="gender" value="others">
+                        <label for="others">Others</label>
+                    </div>
+                    <div >
+                        <input id="submit" type="submit" value="SUBMIT">
+                    </div>
+                </form>
+            </fieldset>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sania's Portfolio Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
